@@ -1,0 +1,155 @@
+Agenda:
+
+AI
+ML - Supervised,Un-Supervised,Reinforcement
+DL 
+Python sample programs
+
+dictionary
+
+top economies in the world
+
+{key:value}
+key - number,string
+value - number,string,list
+
+"""
+dictionary 
+create a dictionary of top economies
+"""
+topeconomy = {
+              "country":["USA","CHINA","GERMANY","JAPAN","INDIA"],
+              "GDP":[27,18,4.7,4.2,4.1],
+              "RANK":[1,2,3,4,5]
+              }
+print(topeconomy)
+print("gdp",topeconomy["GDP"])
+print("keys ",topeconomy.keys())
+print("values ",topeconomy.values())
+for k,v in topeconomy.items():
+  print("key = ",k, " value = ",v)
+
+class and objects
+1. create Product class
+2. add constructor having
+following  arguments
+code,name,supplier,price
+3. add information method
+this method should return the
+arguments passed
+4. create laptop and mobile object
+
+
+class Product():
+  def __init__(self,code,name,supplier,price,rating=None):
+    self.code = code
+    self.name = name
+    self.supplier = supplier
+    self.price = price
+  def information(self):
+    print("code : ",self.code," name : ",self.name, " price ",self.price)
+
+laptop = Product(1,"HP gen 11","HP",75000)
+print(laptop.information())
+mobile = Product(2,"Nokia Smart","Nokia",35000)
+print(mobile.information())
+
+
+Data analytics
+
+
+import pandas as pd
+print("series")
+runs=[40,120,180,200]
+runsseries = pd.Series(runs)
+print(runsseries)
+print("data type ",type(runsseries))
+print("shape ",runsseries.shape)
+print("data frame")
+topeconomy = {
+              "country":["USA","CHINA","GERMANY","JAPAN","INDIA"],
+              "GDP":[27,18,4.7,4.2,4.1],
+              "RANK":[1,2,3,4,5]
+              }
+df = pd.DataFrame(topeconomy)
+print(df)
+print("data type ",type(df))
+print("shape ",df.shape)
+
+
+https://www.listendata.com/2017/12/python-pandas-tutorial.html
+
+mydata = pd.read_csv("https://github.com/deepanshu88/Datasets/raw/master/UploadedFiles/income.csv")
+mydata
+
+print("columns ")
+print(mydata.columns)
+
+print("first 5 records")
+mydata.head()
+
+print("last 5 records")
+mydata.tail()
+
+print("randomly 5 records")
+mydata.sample(n=5)
+
+print("10 % of  records")
+mydata.sample(frac=.1)
+
+mydata.State
+
+
+print( "display first 15 records")
+mydata.head(15)
+
+print("display 2 rows")
+mydata.iloc[:2]
+
+print("display all records and 2 columns")
+mydata.iloc[:,:2]
+
+mydata.loc[:,["State","Y2002"]]
+
+
+visualization
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+print("data frame")
+topeconomy = {
+              "country":["USA","CHINA","GERMANY","JAPAN","INDIA"],
+              "GDP":[27,18,4.7,4.2,4.1],
+              "RANK":[1,2,3,4,5]
+              }
+df = pd.DataFrame(topeconomy)
+
+print("line chart")
+plt.title("top economies")
+plt.xlabel("Country")
+plt.ylabel("GDP")
+plt.plot(topeconomy["country"],topeconomy["GDP"])
+
+print("bar chart")
+plt.title("top economies")
+plt.xlabel("Country")
+plt.ylabel("GDP")
+plt.bar(topeconomy["country"],topeconomy["GDP"])
+
+print("pie chart")
+plt.title("top economies")
+plt.pie(topeconomy["GDP"],labels=topeconomy["country"])
+
+
+
+
+
+
+
+
+
+
+
+
+

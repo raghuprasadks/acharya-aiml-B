@@ -142,6 +142,15 @@ plt.title("top economies")
 plt.pie(topeconomy["GDP"],labels=topeconomy["country"])
 
 
+www.kaushalya.tech
+https://github.com/raghuprasadks/acharya-aiml-B
+
+
+https://www.kaggle.com/datasets/amitabhajoy/bengaluru-house-price-data
+
+
+
+
 
 
 
